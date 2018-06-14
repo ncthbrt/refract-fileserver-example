@@ -1,0 +1,69 @@
+Arguments: 
+  /usr/local/Cellar/node@8/8.11.2/bin/node /usr/local/lib/node_modules/esy/bin/esy.js install
+
+PATH: 
+  /Users/ncthbrt/.opam/4.02.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  0.0.70
+
+Node version: 
+  8.11.2
+
+Platform: 
+  darwin x64
+
+npm manifest (esy.json): 
+  No manifest
+
+npm manifest (package.json): 
+  {
+    "name": "refract-test",
+    "version": "0.1.0",
+    "scripts": {
+      "build": "bsb -make-world",
+      "start": "bsb -make-world -w",
+      "clean": "bsb -clean-world"
+    },
+    "keywords": [
+      "BuckleScript"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+      "bs-platform": "^3.1.4"
+    },
+    "dependencies": {
+      "refract-node": "^0.1.10000"
+    }
+  }
+
+yarn manifest (yarn.json): 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: /Users/ncthbrt/git/refract-test/node_modules/refract-node: Command failed.
+  Exit code: 1
+  Command: node ./copyPlatformBinaryInPlace.js
+  Arguments: 
+  Directory: /Users/ncthbrt/git/refract-test/node_modules/refract-node
+  Output:
+  ppx_refract does not support this platform :(
+  
+  ppx_refract comes prepacked as built binaries to avoid large
+  dependencies at build-time.
+  
+  If you want ppx_refract to support this platform natively,
+  please open an issue at our repository, linked above. Please
+  specify that you are on the darwin platform,
+  on the x64 architecture.
+      at ProcessTermError.MessageError (/usr/local/lib/node_modules/esy/bin/esy.js:223:167)
+      at new ProcessTermError (/usr/local/lib/node_modules/esy/bin/esy.js:270:176)
+      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/esy/bin/esy.js:29769:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)

@@ -1,0 +1,25 @@
+{
+  "name": "refract-test",
+  "version": "0.1.0",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "bsc-flags": [],
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+    "refract-server"
+  ],
+  "warnings": {
+    "error": "+101"
+  },
+  "ppx-flags": [
+    "refract-server/ppx"
+  ],
+  "namespace": true,
+  "refmt": 3
+}
